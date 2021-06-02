@@ -1,0 +1,12 @@
+.calendar-timeline {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(100px, 200px) 1fr;
+    background-color: yellow;
+
+    &__content {
+        grid-column: 2 / 3;
+        background-color: lightpink;
+        width: 100%;
+    }
+}
