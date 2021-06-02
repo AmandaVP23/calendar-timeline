@@ -12,7 +12,9 @@ class Header extends Component<OwnProps, OwnState> {
 
     render() {
         return (
-            <div />
+            <div className="ct-header">
+                header
+            </div>
         );
     }
 }

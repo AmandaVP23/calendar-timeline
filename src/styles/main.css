@@ -10,21 +10,23 @@
   width: 100%;
   display: grid;
   grid-template-columns: minmax(100px, 200px) 1fr;
+  grid-template-rows: min-content 1fr;
   background-color: yellow;
-}
-.calendar-timeline__content {
-  grid-column: 2/3;
-  background-color: lightpink;
-  width: 100%;
 }
 
 .ct-groups-list {
   background-color: aquamarine;
   grid-column: 1/2;
+  grid-row: 2/3;
   height: 150px;
+}
+.ct-groups-list__item {
+  width: 100%;
+  padding: 10px;
 }
 
 .ct-header {
+  grid-column: 2/3;
   height: 20px;
   background-color: antiquewhite;
 }

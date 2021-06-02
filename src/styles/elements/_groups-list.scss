@@ -1,5 +1,11 @@
 .ct-groups-list {
     background-color: aquamarine;
     grid-column: 1 / 2;
+    grid-row: 2 / 3;
     height: 150px;
+
+    &__item {
+        width: 100%;
+        padding: 10px;
+    }
 }
