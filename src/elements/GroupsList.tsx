@@ -21,7 +21,7 @@ class GroupsList extends Component<OwnProps, OwnState> {
                 {Object.keys(groups).map(k => {
                     const group = groups[Number(k)];
                     return (
-                        <div className="ct-groups-list__item">
+                        <div className="ct-groups-list__item" key={k}>
                             {group.name}
                         </div>
                     )

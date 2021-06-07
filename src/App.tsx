@@ -14,6 +14,19 @@ const groups: Array<Group> = [{
     name: 'Group 3',
 }]
 
+/*
+add props to show/hidden sidebar
+add props to change item height that after is going to be the line height
+ */
+
+
+/*
+defaultStartTime
+defaultEndTime
+maxStartTime
+maxEndTime
+ */
+
 function App() {
     return (
         <div className="calendar-timeline">
