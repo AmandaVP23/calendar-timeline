@@ -17,8 +17,13 @@ const groups: Array<Group> = [{
 function App() {
     return (
         <div className="calendar-timeline">
-            <GroupsList groups={groups} />
             <Header />
+            <div className="ct-content">
+                <GroupsList groups={groups} />
+                <div className="ct-scroll">
+                    aqui
+                </div>
+            </div>
         </div>
     );
 }

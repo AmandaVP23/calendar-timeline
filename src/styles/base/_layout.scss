@@ -1,7 +1,18 @@
 .calendar-timeline {
     width: 100%;
-    display: grid;
-    grid-template-columns: minmax(100px, 200px) 1fr;
-    grid-template-rows: min-content 1fr;
     background-color: yellow;
+}
+
+.ct-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+}
+
+.ct-scroll {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    width: 100%;
+    overflow: auto;
+    background-color: lightpink;
 }
