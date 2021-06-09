@@ -39,17 +39,24 @@
   width: 100%;
   background-color: antiquewhite;
   padding-left: 130px;
-}
-.ct-header__main {
   display: inline-flex;
-  width: 100%;
 }
-.ct-header__main__item {
-  padding: 10px 15px;
+.ct-header__col {
+  padding: 10px 0 10px 15px;
   border-right: 1px solid black;
 }
-.ct-header__sub {
-  width: 100%;
+.ct-header__col__bottom {
+  display: grid;
+  grid-template-rows: 1fr;
+  background-color: yellow;
+}
+.ct-header__col__bottom__item {
+  padding: 5px 10px 0 10px;
+  border-right: 1px solid black;
+  grid-row: 1/2;
+}
+.ct-header__col__bottom__item:last-of-type {
+  border-right: none;
 }
 
 /*# sourceMappingURL=main.css.map */

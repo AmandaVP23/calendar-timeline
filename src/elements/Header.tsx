@@ -46,31 +46,37 @@ class Header extends Component<OwnProps, OwnState> {
     render() {
         const { days } = this.state;
         const mainItemWidth = `${(maxHour - minHour) * 100}px`;
-        const hoursQuantity = maxHour - minHour;
-        const hoursArray = Array.from(Array(hoursQuantity).keys());
-        console.log(hoursArray);
+        const hoursArray = Array.from({ length: (maxHour - minHour) + 1}, (v, i) => minHour + i);
 
         return (
             <div className="ct-header">
-                <div className="ct-header__main">
-                    {Object.keys(days).map(k => {
-                        const day = days[Number(k)];
+                {Object.keys(days).map(k => {
+                    const day = days[Number(k)];
 
-                        return (
-                            <div
-                                className="ct-header__main__item"
-                                style={{
-                                    width: mainItemWidth,
-                                }}
-                            >
+                    return (
+                        <div
+                            className="ct-header__col"
+                            style={{
+                                width: mainItemWidth,
+                            }}
+                            key={`${day.getDate()}/${day.getMonth() + 1}`}
+                        >
+                            <div>
                                 {`${day.getDate()}/${day.getMonth() + 1}`}
                             </div>
-                        )
-                    })}
-                </div>
-                <div className="ct-header__sub">
-                    sub
-                </div>
+                            <div className="ct-header__col__bottom">
+                                {Object.keys(hoursArray).map(k => {
+                                    const hour = hoursArray[Number(k)];
+                                    return (
+                                        <div className="ct-header__col__bottom__item">
+                                            {hour}
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                        </div>
+                    )
+                })}
             </div>
         );
     }
